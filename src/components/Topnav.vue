@@ -24,7 +24,10 @@ export default {
 .topnav {
   background: pink;
   display: flex;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 10;
   padding: 16px;
   justify-content: center;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Switch 的文档</p>
+        <p>Doc 的文档</p>
     </div>
 </template>
 <script>
