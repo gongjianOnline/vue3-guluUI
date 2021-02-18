@@ -5,14 +5,14 @@
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
+    <span class="toggleMenu"></span>
   </div>
 </template>
 <script lang='ts'>
 import { inject, Ref } from 'vue'
 export default {
   setup(){
-    const menuVisible = inject<Ref<boolean>>('xxx')
-    console.log(`topnav获取的menuVisible为:${menuVisible.value}`);
+    const menuVisible = inject<Ref<boolean>>('menuVisible')
     const toggleMenu = ()=>{
       menuVisible.value = !menuVisible.value
     }
@@ -27,6 +27,8 @@ export default {
   position: relative;
   z-index: 10;
   padding: 16px;
+  justify-content: center;
+  align-items: center;
   > .logo {
     max-width: 6em;
     margin-right: auto;
@@ -39,5 +41,13 @@ export default {
       margin: 0 1em;
     }
   }
+  > .toggleMenu{
+
+  }
+  @media (max-width:500px) {
+    > .menu{display: none;}
+    > .logo{margin: 0 auto;}
+  }
+
 }
 </style>
