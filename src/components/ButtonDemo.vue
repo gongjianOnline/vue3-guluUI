@@ -47,6 +47,11 @@
         <Button disabled>Hi</Button>
         <Button :disabled="true">Hi</Button>
     </div>
+    <div>
+        <h1>示例五</h1>
+        <Button loading>加载中</Button>
+        <Button>加载完毕</Button>
+    </div>
 </template>
 <script lang="ts">
 import Button from "../lib/button.vue"
