@@ -34,6 +34,10 @@ span{
     width:$h2;
     background: white;
     border-radius: $h2 / 2;
+    transition: left 0.25s;
+}
+button:focus{
+    outline: none;
 }
 button.checked{
     background: blue;
