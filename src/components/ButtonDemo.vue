@@ -1,11 +1,20 @@
 <template>
     <div>
-        <p>Button 的文档</p>
+        <Button @click="onclick" size="mini">hello</Button>
     </div>
 </template>
-<script>
+<script lang="ts">
+import Button from "../lib/button.vue"
 export default {
-    
+    components:{
+        Button
+    },
+    setup(){
+        const onclick = ()=>{
+            console.log("hello")
+        }
+        return{onclick}
+    }
 }
 </script>
 <style lang="scss" scoped>
