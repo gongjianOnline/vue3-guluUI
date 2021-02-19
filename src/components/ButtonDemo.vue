@@ -1,6 +1,9 @@
 <template>
     <div>
-        <Button @click="onclick" size="mini">hello</Button>
+        <Button>hello</Button>
+        <Button theme='button'>hello</Button>
+        <Button theme='link'>hello</Button>
+        <Button theme='text'>hello</Button>
     </div>
 </template>
 <script lang="ts">
@@ -10,10 +13,7 @@ export default {
         Button
     },
     setup(){
-        const onclick = ()=>{
-            console.log("hello")
-        }
-        return{onclick}
+        
     }
 }
 </script>
