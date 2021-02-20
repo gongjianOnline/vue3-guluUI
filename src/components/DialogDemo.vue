@@ -5,7 +5,15 @@
                 @update:visible="x = $event"
                 :closeOnClickOverlay="false"
                 :ok="f1"
-                :cancel="f2"></Dialog>
+                :cancel="f2">
+            <template v-slot:content>
+                <strong>h1</strong>
+                <div>h2</div>
+            </template>
+            <template v-slot:title>
+                <strong>标题</strong>
+            </template>   
+        </Dialog>
     </div>
 </template>
 <script>
