@@ -1,12 +1,17 @@
 <template>
     <div>
         <Button @click="toogle">toggle</Button>  
-        <Dialog :visible="x"></Dialog>
+        <Dialog v-model:visible="x" 
+                @update:visible="x = $event"
+                :closeOnClickOverlay="false"
+                :ok="f1"
+                :cancel="f2"></Dialog>
     </div>
 </template>
 <script>
 import Dialog from '../lib/Dialog.vue'
 import Button from '../lib/button.vue'
+import { ref } from 'vue'
 export default {
     components:{
         Dialog,
@@ -17,7 +22,11 @@ export default {
         const toogle = ()=>{
             x.value = !x.value
         }
-        return {x,toogle}
+        const f1 = ()=>{
+            return false
+        }
+        const f2 = ()=>{}
+        return {x,toogle,f1,f2}
     }
 
 }
