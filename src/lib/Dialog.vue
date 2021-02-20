@@ -1,18 +1,20 @@
 <template>
-  <div class="gulu-dialog-overlay"></div>
-  <div class="gulu-dialog-wrapper">
-    <div class="gulu-dialog">
-      <header>标题</header>
-      <main>
-        <p>第一行字</p>
-        <p>第二行字</p>
-      </main>
-      <footer>
-        <Button>ok</Button>
-        <Button>Cancel</Button>
-      </footer>
+  <template v-if="visible">
+    <div class="gulu-dialog-overlay"></div>
+    <div class="gulu-dialog-wrapper">
+      <div class="gulu-dialog">
+        <header>标题</header>
+        <main>
+          <p>第一行字</p>
+          <p>第二行字</p>
+        </main>
+        <footer>
+          <Button>ok</Button>
+          <Button>Cancel</Button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </template>
 </template>
 <script lang="ts">
 import Button from "./button.vue";
@@ -20,6 +22,15 @@ export default {
   components: {
     Button,
   },
+  props:{
+    visible:{
+      type:Boolean,
+      default:false
+    },
+    setup(){
+
+    }
+  }
 };
 </script>
 
