@@ -21,7 +21,7 @@
     </div>
 </template>
 <script lang="ts">
-import { onMounted, onUpdated, ref } from 'vue';
+import { onMounted, onUpdated, ref, watchEffect } from 'vue';
 import Tab from "./Tab.vue"
 export default {
     props:{
@@ -49,6 +49,9 @@ export default {
         onUpdated(()=>{
             x()
         })
+        // watchEffect(()=>{
+        //     x()
+        // })
         defaults.forEach((tag)=>{
             if(tag.type !== Tab){
                 throw new Error("tabs 子标签必须是 tab")
