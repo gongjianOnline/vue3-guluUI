@@ -5,7 +5,7 @@
                 :class="{selected:t === selected}"
                 @click="select(t)"
                 v-for="(t,index) in titles"
-                :ref="el=>{if(el)navItems[index]=el}"
+                :ref="el=>{if(t===selected)selectedItem=el}"
                 :key="index">
                 {{t}}
             </div>
@@ -30,17 +30,15 @@ export default {
         }
     },
     setup(props,context){
-        const navItems = ref<HTMLDivElement[]>([])
+        const selectedItem = ref<HTMLDivElement>(null)
         const indicator = ref<HTMLDivElement>(null)
         const defaults = context.slots.default(null);
         const container = ref<HTMLDivElement>(null);
         const x = ()=>{
-            const divs = navItems.value;
-            const result = divs.filter(div=>div.classList.contains('selected'))[0]
-            const {width} = result.getBoundingClientRect()
+            const {width} = selectedItem.value.getBoundingClientRect()
             indicator.value.style.width = width+"px";
             const {left:left1} = container.value.getBoundingClientRect()
-            const {left:left2} = result.getBoundingClientRect()
+            const {left:left2} = selectedItem.value.getBoundingClientRect()
             const left = left2 - left1
             console.log(`打印${left2}`)
             indicator.value.style.left = left + 'px'
@@ -62,7 +60,7 @@ export default {
         const select = (title: string) => {
             context.emit('update:selected', title)
         }
-        return {defaults,titles,select,navItems,indicator,container}
+        return {defaults,titles,select,selectedItem,indicator,container}
     }    
 }
 </script>
