@@ -2,7 +2,7 @@
 请先安装本组件库。
 然后在你的代码中写入下面的代码
 ```javascript
-    import {Button, Tabs, Switch, Dialog} from "king-ui"
+    import {Button, Tabs, Switch, Dialog} from "guku-ui"
 ```
 就可以使用我提供的组件了。
 ##  Vue 单文件组件
@@ -14,7 +14,7 @@
         </div>
     <template/>
     <script lang="ts">
-        import {Button, Tabs, Switch, Dialog} from "king-ui"
+        import {Button, Tabs, Switch, Dialog} from "guku-ui"
         export default {
             components: {Button}
         }
