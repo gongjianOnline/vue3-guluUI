@@ -3,11 +3,11 @@
     <div class="TopnavAndBanner">
       <Topnav />
       <div class="banner">
-        <h1>轱辘UI</h1>
-        <h2>一个UI框架</h2>
+        <h1>Guku-UI</h1>
+        <h2>一个基于Vue3的UI框架</h2>
         <p class="actions">
-          <a href="https:/github.com">GitHub</a>
-          <router-link to="/doc">开始</router-link>
+          <a href="https://github.com/gongjianOnline/vue3-guluUI">GitHub</a>
+          <router-link to="/doc/get-started">开始</router-link>
         </p>
       </div>
     </div>

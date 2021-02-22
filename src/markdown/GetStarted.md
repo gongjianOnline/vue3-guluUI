@@ -1,5 +1,5 @@
 # 开始使用
-请先<a href="#/doc/install">安装</a>本组件库。
+请先<a href="/doc/install">安装</a>本组件库。
 然后在你的代码中写入下面的代码
 ```javascript
     import {Button, Tabs, Switch, Dialog} from "king-ui"

@@ -131,6 +131,15 @@ $grey: grey;
     }
   }
   &.gulu-theme-link {
+    &.gulu-level-normal{
+      color: $color;
+      border-color: $color;
+      border: none;
+      &:hover,
+      &:focus {
+        color: darken($color, 10%);
+      }
+    }
     &.gulu-level-danger {
       color: $red;
       &:hover,
@@ -146,6 +155,9 @@ $grey: grey;
       &:focus {
         color: darken($blue, 10%);
       }
+    }
+    &.gulu-level-normal{
+      color: #000;
     }
     &.gulu-level-danger {
       color: $red;
